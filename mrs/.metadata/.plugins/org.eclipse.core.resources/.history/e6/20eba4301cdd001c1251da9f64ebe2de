@@ -1,0 +1,11 @@
+package com.tsalogistica.logistica.exception;
+
+public class EntidadeNaoEncontradaException extends NegocioException {
+
+	public EntidadeNaoEncontradaException(String message) {
+		super(message);
+	
+	}
+
+	
+}

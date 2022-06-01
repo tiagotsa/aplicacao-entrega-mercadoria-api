@@ -1,0 +1,25 @@
+package com.tsalogistica.logistica.service;
+
+import org.springframework.stereotype.Service;
+
+import com.tsalogistica.logistica.domain.model.Entrega;
+import com.tsalogistica.logistica.domain.model.Ocorrencia;
+import com.tsalogistica.logistica.exception.NegocioException;
+import com.tsalogistica.logistica.repository.EntregaRepository;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+@Service
+public class RegistroOcorrenciaService {
+
+	private EntregaRepository entregaRepository;
+	
+	public Ocorrencia registrar(Long entregaId, String descricao) {
+		Entrega entrega = entregaRepository.findById(entregaId)
+		    .orElseThrow(() -> new NegocioException("Entrega não encontrada"));
+		
+		return entrega.adicionarOcorrencia(descricao);
+		
+	}
+}

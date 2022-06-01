@@ -1,0 +1,15 @@
+package com.tsalogistica.logistica.assembler;
+
+import org.modelmapper.ModelMapper;
+
+import com.tsalogistica.logistica.apii.model.EntregaModel;
+import com.tsalogistica.logistica.domain.model.Entrega;
+
+public class EntregaAssembler {
+
+	private ModelMapper modelMapper;
+	
+	public EntregaModel toModel(Entrega entrega) {
+		return modelMapper.map(entrega, EntregaModel.class);
+	}
+}

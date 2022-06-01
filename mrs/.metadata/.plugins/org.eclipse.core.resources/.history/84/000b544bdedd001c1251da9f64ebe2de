@@ -1,0 +1,22 @@
+package com.tsalogistica.logistica.service;
+
+import com.tsalogistica.logistica.domain.model.Entrega;
+import com.tsalogistica.logistica.domain.model.StatusEntrega;
+import com.tsalogistica.logistica.exception.NegocioException;
+
+public class FinalizacaoEntregaService {
+
+	public void finalizar(Long entregaId) {
+		Entrega entrega = buscaEntregaService.buscar(entregaId);
+		
+		if(!entrega.getStatus().equals(statusEntrega.PENDENTE)) {
+		throw new NegocioException("Entrega não pode ser finalizada");
+   }
+	
+	entrega.setStatus(StatusEntrega.FINALIZADA);
+	
+	entregaRepository.save(entrega);
+	
+}
+
+}

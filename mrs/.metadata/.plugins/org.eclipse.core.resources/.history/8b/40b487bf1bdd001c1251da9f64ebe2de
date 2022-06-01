@@ -1,0 +1,5 @@
+package com.tsalogistica.logistica.exception;
+
+public class EntidadeNaoEncontrada {
+
+}

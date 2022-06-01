@@ -1,0 +1,5 @@
+package com.tsalogistica.logistica.input;
+
+public class OcorrenciaInput {
+
+}

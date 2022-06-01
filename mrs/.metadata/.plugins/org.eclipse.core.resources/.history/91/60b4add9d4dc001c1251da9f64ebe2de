@@ -1,0 +1,5 @@
+package com.tsalogistica.logistica.service;
+
+public class RegistroOcorrenciaService {
+
+}

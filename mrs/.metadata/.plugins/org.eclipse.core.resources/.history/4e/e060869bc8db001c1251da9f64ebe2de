@@ -1,0 +1,7 @@
+package com.tsalogistica.logistica.apii.model;
+
+public class ClienteResumoModel {
+
+	private Long id;
+	private String nome;
+}
